@@ -22,21 +22,14 @@ Peon::Peon(Peon const& src)
 	name = src.name;
 }
 
-void	Peon::getPolymorphed(void) const
-{
-	std::cout << name << " has been turned into a pink pony!" << std::endl;
-}
-
-Peon&			Peon::operator=(Peon const& src)
+Peon&	Peon::operator=(Peon const& src)
 {
 	if (this != &src)
 		this->name = src.name;
-	return (*this);
+	return *this;
 }
-/*
-std::ostream&	operator<<(std::ostream& os, Peon const& src)
+
+void	Peon::getPolymorphed() const
 {
-	os << src.getName() << std::endl;
-	return os;
+	std::cout << name << " has been turned into a pink pony!" << std::endl;
 }
- */

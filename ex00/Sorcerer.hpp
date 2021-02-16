@@ -20,8 +20,8 @@ public:
 
 	Sorcerer&	operator=(const Sorcerer& rhs);
 
-	inline const std::string&	getName() const;
-	inline const std::string&	getTitle() const;
+	std::string const&		getName() const { return name; };
+	std::string const&		getTitle() const { return title; };
 
 	void	polymorph(Victim const& victim) const;
 };

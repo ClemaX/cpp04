@@ -34,17 +34,7 @@ Sorcerer&				Sorcerer::operator=(const Sorcerer& rhs)
 		name = rhs.name;
 		title = rhs.name;
 	}
-	return (*this);
-}
-
-const std::string&		Sorcerer::getName() const
-{
-	return (name);
-}
-
-const std::string&		Sorcerer::getTitle() const
-{
-	return (title);
+	return *this;
 }
 
 void	Sorcerer::polymorph(Victim const& victim) const
@@ -56,6 +46,6 @@ std::ostream&			operator<<(std::ostream& os, const Sorcerer& src)
 {
 	os << "I am " << src.getName() << ", " << src.getTitle()
 		<< ", and I like ponies!" << std::endl;
-	return (os);
+	return os;
 }
 

@@ -24,7 +24,7 @@ Victim::Victim(std::string const& name)
 		<< name << " just appeared!" << std::endl;
 }
 
-void Victim::getPolymorphed(void) const
+void Victim::getPolymorphed() const
 {
 	std::cout << name << " has been turned into a cute little sheep!"
 		<< std::endl;
