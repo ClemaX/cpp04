@@ -5,19 +5,19 @@
 
 class Victim
 {
-private:
+protected:
 	std::string	name;
 
 public:
 	Victim();
 	~Victim();
-	
+
 	Victim(const Victim& src);
 	Victim(const std::string& name);
 
-	inline const std::string&	getName() const;
+	inline const std::string&	getName(void) const	{ return (name); };
 
-	void	getPolymorphed() const;
+	virtual void	getPolymorphed(void) const;
 
 	Victim&	operator=(const Victim& rhs);
 };

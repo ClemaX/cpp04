@@ -10,34 +10,34 @@ Victim::~Victim()
 		<< std::endl;
 }
 
-Victim::Victim(const Victim& src)
+Victim::Victim(Victim const& src)
+	:	name(src.name)
+{
+	std::cout << "Some random victim called "
+		<< name << " just appeared!" << std::endl;
+}
+
+Victim::Victim(std::string const& name)
 	:	name(name)
 {
 	std::cout << "Some random victim called "
-		<< name << " appeared!" << std::endl;
+		<< name << " just appeared!" << std::endl;
 }
 
-Victim::Victim(const std::string& name)
-	:	name(name)
+void Victim::getPolymorphed(void) const
 {
-	std::cout << "Some random victim called "
-		<< name << " appeared!" << std::endl;
-}
-
-void Victim::getPolymorphed() const
-{
-	std::cout << name << "has been turned into a cute little sheep!"
+	std::cout << name << " has been turned into a cute little sheep!"
 		<< std::endl;
 }
 
-Victim&	Victim::operator=(const Victim& src)
+Victim&	Victim::operator=(Victim const& src)
 {
 	name = src.name;
 	return *this;
 }
 
-std::ostream&	operator<<(std::ostream& os, const Victim& src)
+std::ostream&	operator<<(std::ostream& os, Victim const& src)
 {
-	os << "I'm " << src << " and I like otters!" << std::endl;
+	os << "I'm " << src.getName() << " and I like otters!" << std::endl;
 	return os;
 }
