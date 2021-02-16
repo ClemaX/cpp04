@@ -1,6 +1,7 @@
 #include "Peon.hpp"
 
 Peon::Peon()
+	:	Victim("")
 {
 	std::cout << "Zog zog." << std::endl;
 }
@@ -10,19 +11,32 @@ Peon::~Peon()
 	std::cout << "Bleuark..." << std::endl;
 }
 
-Peon::Peon(const Peon& src)
+Peon::Peon(std::string const& name)
+	:	Victim(name)
 {
-	// TODO: Implement copy contructor
+	std::cout << "Zog zog." << std::endl;
 }
 
-Peon&			Peon::operator=(const Peon& src)
+Peon::Peon(Peon const& src)
 {
-	// TODO: Implement = operator
-	return *this;
+	name = src.name;
 }
 
-std::ostream&	operator<<(std::ostream& os, const Peon& src)
+void	Peon::getPolymorphed(void) const
 {
-	// TODO: Implement << operator
+	std::cout << name << " has been turned into a pink pony!" << std::endl;
+}
+
+Peon&			Peon::operator=(Peon const& src)
+{
+	if (this != &src)
+		this->name = src.name;
+	return (*this);
+}
+/*
+std::ostream&	operator<<(std::ostream& os, Peon const& src)
+{
+	os << src.getName() << std::endl;
 	return os;
 }
+ */
