@@ -1,28 +1,43 @@
 #include "AWeapon.hpp"
 
 AWeapon::AWeapon()
+	:	name(""),
+		apCost(0),
+		damage(0)
 {
-	// TODO: Implement default contructor
 }
 
 AWeapon::~AWeapon()
 {
-	// TODO: Implement default destructor
+}
+
+AWeapon::AWeapon(std::string const& name, int apCost, int damage)
+	:	name(name),
+		apCost(apCost),
+		damage(damage)
+{
 }
 
 AWeapon::AWeapon(AWeapon const& src)
+	:	name(src.name),
+		apCost(src.apCost),
+		damage(src.damage)
 {
-	// TODO: Implement copy contructor
 }
 
 AWeapon&		AWeapon::operator=(AWeapon const& src)
 {
-	// TODO: Implement = operator
+	if (this != &src)
+	{
+		name = src.name;
+		apCost = src.apCost;
+		damage = src.damage;
+	}
 	return *this;
 }
 
 std::ostream&	operator<<(std::ostream& os, AWeapon const& src)
 {
-	// TODO: Implement << operator
+	os << src.getName() << std::endl;
 	return os;
 }

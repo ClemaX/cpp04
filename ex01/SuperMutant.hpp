@@ -3,7 +3,9 @@
 #include <iostream>
 #include <string>
 
-class SuperMutant
+#include "Enemy.hpp"
+
+class SuperMutant	:	virtual public Enemy
 {
 private:
 
@@ -13,8 +15,5 @@ public:
 
 	SuperMutant(SuperMutant const& src);
 
-	SuperMutant&	operator=(SuperMutant const& rhs);
+	virtual void	takeDamage(int amount);
 };
-
-std::ostream&	operator<<(std::ostream& os, SuperMutant const& src);
-

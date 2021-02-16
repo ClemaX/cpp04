@@ -1,28 +1,12 @@
 #include "PowerFist.hpp"
 
 PowerFist::PowerFist()
+	:	AWeapon("Power Fist", 8, 50)
 {
 	// TODO: Implement default contructor
 }
 
-PowerFist::~PowerFist()
+void	PowerFist::attack() const
 {
-	// TODO: Implement default destructor
-}
-
-PowerFist::PowerFist(PowerFist const& src)
-{
-	// TODO: Implement copy contructor
-}
-
-PowerFist&		PowerFist::operator=(PowerFist const& src)
-{
-	// TODO: Implement = operator
-	return *this;
-}
-
-std::ostream&	operator<<(std::ostream& os, PowerFist const& src)
-{
-	// TODO: Implement << operator
-	return os;
+	std::cout << "* pschhh... SBAM! *" << std::endl;
 }

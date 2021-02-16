@@ -1,28 +1,12 @@
 #include "PlasmaRifle.hpp"
 
 PlasmaRifle::PlasmaRifle()
+	:	AWeapon("Plasma Rifle", 5, 21)
 {
 	// TODO: Implement default contructor
 }
 
-PlasmaRifle::~PlasmaRifle()
+void	PlasmaRifle::attack() const
 {
-	// TODO: Implement default destructor
-}
-
-PlasmaRifle::PlasmaRifle(PlasmaRifle const& src)
-{
-	// TODO: Implement copy contructor
-}
-
-PlasmaRifle&		PlasmaRifle::operator=(PlasmaRifle const& src)
-{
-	// TODO: Implement = operator
-	return *this;
-}
-
-std::ostream&	operator<<(std::ostream& os, PlasmaRifle const& src)
-{
-	// TODO: Implement << operator
-	return os;
+	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

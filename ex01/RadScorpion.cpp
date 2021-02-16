@@ -1,28 +1,18 @@
 #include "RadScorpion.hpp"
 
 RadScorpion::RadScorpion()
+	:	Enemy(80, "RadScorpion")
 {
-	// TODO: Implement default contructor
+	std::cout << "* click click click *" << std::endl;
 }
 
 RadScorpion::~RadScorpion()
 {
-	// TODO: Implement default destructor
+	std::cout << "* SPROTCH *" << std::endl;
 }
 
 RadScorpion::RadScorpion(RadScorpion const& src)
+	:	Enemy(src.hp, src.type)
 {
-	// TODO: Implement copy contructor
-}
-
-RadScorpion&		RadScorpion::operator=(RadScorpion const& src)
-{
-	// TODO: Implement = operator
-	return *this;
-}
-
-std::ostream&	operator<<(std::ostream& os, RadScorpion const& src)
-{
-	// TODO: Implement << operator
-	return os;
+	std::cout << "* click click click *" << std::endl;
 }

@@ -3,18 +3,12 @@
 #include <iostream>
 #include <string>
 
-class PowerFist
-{
-private:
+#include "AWeapon.hpp"
 
+class PowerFist : virtual public AWeapon
+{
 public:
 	PowerFist();
-	~PowerFist();
 
-	PowerFist(PowerFist const& src);
-
-	PowerFist&	operator=(PowerFist const& rhs);
+	virtual void	attack() const;
 };
-
-std::ostream&	operator<<(std::ostream& os, PowerFist const& src);
-

@@ -3,18 +3,14 @@
 #include <iostream>
 #include <string>
 
-class PlasmaRifle
+#include "AWeapon.hpp"
+
+class PlasmaRifle : virtual public AWeapon
 {
 private:
 
 public:
 	PlasmaRifle();
-	~PlasmaRifle();
 
-	PlasmaRifle(PlasmaRifle const& src);
-
-	PlasmaRifle&	operator=(PlasmaRifle const& rhs);
+	virtual void	attack() const;
 };
-
-std::ostream&	operator<<(std::ostream& os, PlasmaRifle const& src);
-

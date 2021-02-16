@@ -1,28 +1,22 @@
 #include "SuperMutant.hpp"
 
 SuperMutant::SuperMutant()
+	:	Enemy(170, "Super Mutant")
 {
-	// TODO: Implement default contructor
+	std::cout << "Gaaah. Me wany smash heads!" << std::endl;
 }
 
 SuperMutant::~SuperMutant()
 {
-	// TODO: Implement default destructor
+	std::cout << "Aaargh..." << std::endl;
 }
 
 SuperMutant::SuperMutant(SuperMutant const& src)
+	:	Enemy(src.hp, src.type)
 {
-	// TODO: Implement copy contructor
 }
 
-SuperMutant&		SuperMutant::operator=(SuperMutant const& src)
+void		SuperMutant::takeDamage(int amount)
 {
-	// TODO: Implement = operator
-	return *this;
-}
-
-std::ostream&	operator<<(std::ostream& os, SuperMutant const& src)
-{
-	// TODO: Implement << operator
-	return os;
+	Enemy::takeDamage(amount - 3);
 }

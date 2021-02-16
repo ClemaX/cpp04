@@ -1,28 +1,49 @@
 #include "Enemy.hpp"
 
 Enemy::Enemy()
+	:	hp(0),
+		type("")
 {
-	// TODO: Implement default contructor
 }
 
 Enemy::~Enemy()
 {
-	// TODO: Implement default destructor
+}
+
+Enemy::Enemy(int hp, std::string const& type)
+	:	hp(hp),
+		type(type)
+{
+	// TODO: Implement default contructor
 }
 
 Enemy::Enemy(Enemy const& src)
+	:	hp(src.hp),
+		type(src.type)
 {
-	// TODO: Implement copy contructor
 }
 
 Enemy&		Enemy::operator=(Enemy const& src)
 {
-	// TODO: Implement = operator
+	if (this != &src)
+	{
+		hp = src.hp;
+		type = src.type;
+	}
 	return *this;
+}
+
+void		Enemy::takeDamage(int amount)
+{
+	if (amount > hp)
+		amount = hp;
+	if (amount > 0)
+		hp -= amount;
 }
 
 std::ostream&	operator<<(std::ostream& os, Enemy const& src)
 {
-	// TODO: Implement << operator
+	os << "Enemy: type: " << src.getType() << ", hitpoints: " << src.getHP()
+		<< std::endl;
 	return os;
 }
