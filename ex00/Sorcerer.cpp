@@ -47,9 +47,9 @@ const std::string&		Sorcerer::getTitle() const
 	return (title);
 }
 
-void	Sorcerer::polymorph(Victim &const victim) const
+void	Sorcerer::polymorph(Victim const& victim) const
 {
-	// TODO: Implement polymorph
+	victim.getPolymorphed();
 }
 
 std::ostream&			operator<<(std::ostream& os, const Sorcerer& src)
