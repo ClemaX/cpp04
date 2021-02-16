@@ -3,7 +3,9 @@
 #include <iostream>
 #include <string>
 
-class Peon
+#include "Victim.hpp"
+
+class Peon : virtual public Victim
 {
 private:
 

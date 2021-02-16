@@ -2,12 +2,12 @@
 
 Peon::Peon()
 {
-	// TODO: Implement default contructor
+	std::cout << "Zog zog." << std::endl;
 }
 
 Peon::~Peon()
 {
-	// TODO: Implement default destructor
+	std::cout << "Bleuark..." << std::endl;
 }
 
 Peon::Peon(const Peon& src)
