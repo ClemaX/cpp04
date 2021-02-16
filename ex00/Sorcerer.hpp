@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+#include "Victim.hpp"
+
 class Sorcerer
 {
 private:
@@ -20,6 +22,8 @@ public:
 
 	inline const std::string&	getName() const;
 	inline const std::string&	getTitle() const;
+
+	void	polymorph(Victim const& victim) const;
 };
 
 std::ostream&	operator<<(std::ostream& os, const Sorcerer& src);
