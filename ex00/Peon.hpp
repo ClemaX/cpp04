@@ -1,24 +1,19 @@
-#ifndef PEON_HPP
-# define PEON_HPP
+#pragma once
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 class Peon
 {
+private:
 
-	public:
+public:
+	Peon();
+	~Peon();
 
-		Peon();
-		Peon( Peon const & src );
-		~Peon();
+	Peon(const Peon& src);
 
-		Peon &		operator=( Peon const & rhs );
-
-	private:
-
+	Peon&	operator=(const Peon& rhs);
 };
 
-std::ostream &			operator<<( std::ostream & o, Peon const & i );
-
-#endif /* ************************************************************ PEON_H */
+std::ostream&	operator<<(std::ostream& os, const Peon& src);

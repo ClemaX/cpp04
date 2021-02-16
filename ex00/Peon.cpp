@@ -1,55 +1,28 @@
 #include "Peon.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 Peon::Peon()
 {
+	// TODO: Implement default contructor
 }
-
-Peon::Peon( const Peon & src )
-{
-}
-
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Peon::~Peon()
 {
+	// TODO: Implement default destructor
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-Peon &				Peon::operator=( Peon const & rhs )
+Peon::Peon(const Peon& src)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	// TODO: Implement copy contructor
+}
+
+Peon&			Peon::operator=(const Peon& src)
+{
+	// TODO: Implement = operator
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Peon const & i )
+std::ostream&	operator<<(std::ostream& os, const Peon& src)
 {
-	//o << "Value = " << i.getValue();
-	return o;
+	// TODO: Implement << operator
+	return os;
 }
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */
