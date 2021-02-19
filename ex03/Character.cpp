@@ -11,9 +11,9 @@ Character::~Character()
 }
 
 Character::Character(std::string const& name)
-	:	name(name), materies(materiesSize)
+	:	name(name), materies()
 {
-	// TODO: Implement default contructor
+	materies.reserve(materiesSize);
 }
 
 // TODO: Deep copy materies

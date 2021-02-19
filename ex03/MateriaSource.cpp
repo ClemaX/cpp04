@@ -1,9 +1,9 @@
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource()
-	:	materies(materiesSize)
+	:	materies()
 {
-	// TODO: Implement default contructor
+	materies.reserve(materiesSize);
 }
 
 MateriaSource::~MateriaSource()
