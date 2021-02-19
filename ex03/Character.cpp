@@ -7,7 +7,15 @@ Character::Character()
 
 Character::~Character()
 {
-	// TODO: Implement default destructor
+	std::vector<AMateria*>::iterator				it = materies.begin();
+	const std::vector<AMateria*>::const_iterator	end = materies.end();
+
+	while (it != end)
+	{
+		delete *it;
+		*it++ = NULL;
+	}
+	materies.clear();
 }
 
 Character::Character(std::string const& name)

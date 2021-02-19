@@ -8,7 +8,15 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
-	// TODO: Implement default destructor
+	std::vector<AMateria*>::iterator				it = materies.begin();
+	const std::vector<AMateria*>::const_iterator	end = materies.end();
+
+	while (it != end)
+	{
+		delete *it;
+		*it++ = NULL;
+	}
+	materies.clear();
 }
 
 MateriaSource::MateriaSource(MateriaSource const& src)
