@@ -6,7 +6,7 @@
 
 #include "ICharacter.hpp"
 
-class Character	:	ICharacter
+class Character	:	virtual public ICharacter
 {
 private:
 	static const unsigned int	materiesSize = 4;
@@ -26,6 +26,9 @@ public:
 	inline virtual std::string const&	getName() const { return name; };
 
 	virtual void	equip(AMateria* materia);
-	virtual void	unequip(int index);
-	virtual void	use(int index, ICharacter& target);
+	virtual void	unequip(unsigned int index);
+	virtual void	use(unsigned int index, ICharacter& target);
 };
+
+
+std::ostream&	operator<<(std::ostream& os, Character const& src);

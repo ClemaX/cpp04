@@ -25,7 +25,7 @@ Character::Character(Character const& src)
 
 Character&		Character::operator=(Character const& src)
 {
-	// TODO: Implement = operator
+	name = src.name;
 	return *this;
 }
 
@@ -35,14 +35,20 @@ void	Character::equip(AMateria* materia)
 		materies.push_back(materia);
 }
 
-void	Character::unequip(int index)
+void	Character::unequip(unsigned int index)
 {
 	if (index < materies.size())
 		materies.erase(materies.begin() + index); // TODO: Cleanup
 }
 
-void	Character::use(int index, ICharacter& target)
+void	Character::use(unsigned int index, ICharacter& target)
 {
 	if (index < materiesSize && materies[index] != NULL)
 		materies[index]->use(target);
+}
+
+std::ostream&	operator<<(std::ostream& os, Character const& src)
+{
+	os << src.getName();
+	return (os);
 }

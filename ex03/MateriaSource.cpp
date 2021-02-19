@@ -13,6 +13,7 @@ MateriaSource::~MateriaSource()
 
 MateriaSource::MateriaSource(MateriaSource const& src)
 {
+	(void)src;
 	// TODO: Implement copy contructor
 }
 
@@ -48,6 +49,7 @@ AMateria*	MateriaSource::createMateria(std::string const& type)
 
 std::ostream&	operator<<(std::ostream& os, MateriaSource const& src)
 {
+	(void)src;
 	os << "Materia Source";
 	return os;
 }

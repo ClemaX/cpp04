@@ -10,7 +10,7 @@ class IMateriaSource
 private:
 
 public:
-	IMateriaSource();
+	IMateriaSource() {};
 	virtual ~IMateriaSource() {};
 
 	IMateriaSource(IMateriaSource const& src);
@@ -22,4 +22,3 @@ public:
 };
 
 std::ostream&	operator<<(std::ostream& os, IMateriaSource const& src);
-

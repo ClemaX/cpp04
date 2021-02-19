@@ -20,6 +20,7 @@ AMateria::AMateria(std::string const& type, unsigned int xp)
 
 void			AMateria::use(ICharacter& target)
 {
+	(void)target;
 	xp += 10;
 }
 

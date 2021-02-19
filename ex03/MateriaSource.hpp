@@ -6,11 +6,11 @@
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource	:	IMateriaSource
+class MateriaSource	:	virtual public IMateriaSource
 {
 private:
-	static unsigned int		materiesSize;
-	std::vector<AMateria*>	materies;
+	static const unsigned int	materiesSize = 4;
+	std::vector<AMateria*>		materies;
 
 public:
 	MateriaSource();
@@ -25,4 +25,3 @@ public:
 };
 
 std::ostream&	operator<<(std::ostream& os, MateriaSource const& src);
-
