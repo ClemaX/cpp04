@@ -9,5 +9,8 @@ int main()
 	std::cout << robert << jim << joe;
 	robert.polymorph(jim);
 	robert.polymorph(joe);
+
+	//system("../leaks.sh tests");
+
 	return 0;
 }

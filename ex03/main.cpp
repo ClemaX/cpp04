@@ -20,5 +20,8 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+
+	//system("../leaks.sh tests");
+
 	return 0;
 }

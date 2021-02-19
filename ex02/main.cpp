@@ -19,5 +19,7 @@ int main()
 	}
 	delete vlc;
 
+	//system("../leaks.sh tests");
+
 	return 0;
 }

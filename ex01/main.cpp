@@ -27,5 +27,8 @@ int main()
 
 	me->attack(b);
 	std::cout << *me;
+
+	//system("../leaks.sh tests");
+
 	return 0;
 }
