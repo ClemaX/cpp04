@@ -12,7 +12,10 @@ MiningBarge::~MiningBarge()
 	std::vector<IMiningLaser*>::const_iterator	end = lasers.end();
 
 	while (it != end)
-		delete *it++;
+	{
+		delete *it;
+		*it++ = NULL;
+	}
 	lasers.clear();
 }
 
