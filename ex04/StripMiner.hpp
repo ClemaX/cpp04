@@ -3,7 +3,8 @@
 #include <iostream>
 #include <string>
 
-class StripMiner
+#include "IMiningLaser.hpp"
+class StripMiner	:	virtual public IMiningLaser
 {
 private:
 
@@ -14,7 +15,8 @@ public:
 	StripMiner(StripMiner const& src);
 
 	StripMiner&	operator=(StripMiner const& rhs);
+
+	virtual void	mine(IAsteroid *asteroid);
 };
 
 std::ostream&	operator<<(std::ostream& os, StripMiner const& src);
-

@@ -5,8 +5,6 @@
 
 #include "IAsteroid.hpp"
 
-class IAsteroid;
-
 class IMiningLaser
 {
 private:

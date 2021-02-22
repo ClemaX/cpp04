@@ -20,10 +20,10 @@ public:
 
 	Comet&	operator=(Comet const& rhs);
 
-	inline virtual std::string const&	getName() { return name; }
+	inline virtual std::string const&	getName() const { return name; }
 
-	virtual std::string const&	beMined(DeepCoreMiner const* laser) const;
-	virtual std::string const&	beMined(StripMiner const* laser) const;
+	virtual std::string	beMined(DeepCoreMiner const* laser) const;
+	virtual std::string	beMined(StripMiner const* laser) const;
 };
 
 std::ostream&	operator<<(std::ostream& os, Comet const& src);

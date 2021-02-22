@@ -4,8 +4,6 @@
 #include <string>
 
 #include "IAsteroid.hpp"
-#include "DeepCoreMiner.hpp"
-#include "StripMiner.hpp"
 
 class Asteroid	:	virtual public IAsteroid
 {

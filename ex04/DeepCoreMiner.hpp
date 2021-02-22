@@ -5,8 +5,6 @@
 
 #include "IMiningLaser.hpp"
 
-class IAsteroid;
-
 class DeepCoreMiner	:	virtual public IMiningLaser
 {
 private:
