@@ -1,28 +1,56 @@
 #include "MiningBarge.hpp"
 
 MiningBarge::MiningBarge()
+	:	lasers()
 {
-	// TODO: Implement default contructor
+	lasers.reserve(lasersSize);
 }
 
 MiningBarge::~MiningBarge()
 {
-	// TODO: Implement default destructor
+	std::vector<IMiningLaser*>::iterator		it = lasers.begin();
+	std::vector<IMiningLaser*>::const_iterator	end = lasers.end();
+
+	while (it != end)
+		delete *it++;
+	lasers.clear();
 }
 
 MiningBarge::MiningBarge(MiningBarge const& src)
+	:	lasers()
 {
-	// TODO: Implement copy contructor
+	// Cannot deep copy (Interface cannot clone)
+	lasers.reserve(src.lasers.capacity());
 }
 
 MiningBarge&		MiningBarge::operator=(MiningBarge const& src)
 {
-	// TODO: Implement = operator
+	(void)src;
 	return *this;
+}
+
+void	MiningBarge::equip(IMiningLaser* laser)
+{
+	if (laser && lasers.size() < lasers.capacity())
+		lasers.push_back(laser);
+}
+
+void	MiningBarge::mine(IAsteroid* asteroid) const
+{
+	std::vector<IMiningLaser*>::const_iterator	it = lasers.begin();
+	std::vector<IMiningLaser*>::const_iterator	end = lasers.end();
+
+	while (it != end)
+	{
+		if (*it != NULL)
+			(*it)->mine(asteroid);
+		it++;
+	}
 }
 
 std::ostream&	operator<<(std::ostream& os, MiningBarge const& src)
 {
-	// TODO: Implement << operator
+	os << "MiningBarge (" << src.getLasersCount()
+		<< '/' << src.getLasersCapacity() << " lasers)";
 	return os;
 }
