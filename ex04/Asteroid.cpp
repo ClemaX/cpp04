@@ -23,16 +23,19 @@ Asteroid&		Asteroid::operator=(Asteroid const& src)
 
 std::string	Asteroid::beMined(DeepCoreMiner const* laser) const
 {
+	(void)laser;
 	return "Dragonite";
 }
 
 std::string	Asteroid::beMined(StripMiner const* laser) const
 {
+	(void)laser;
 	return "Flavium";
 }
 
 std::ostream&	operator<<(std::ostream& os, Asteroid const& src)
 {
+	(void)src;
 	os << "Asteroid";
 	return os;
 }

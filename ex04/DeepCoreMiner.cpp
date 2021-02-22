@@ -2,22 +2,20 @@
 
 DeepCoreMiner::DeepCoreMiner()
 {
-	// TODO: Implement default contructor
 }
 
 DeepCoreMiner::~DeepCoreMiner()
 {
-	// TODO: Implement default destructor
 }
 
 DeepCoreMiner::DeepCoreMiner(DeepCoreMiner const& src)
 {
-	// TODO: Implement copy contructor
+	(void)src;
 }
 
 DeepCoreMiner&		DeepCoreMiner::operator=(DeepCoreMiner const& src)
 {
-	// TODO: Implement = operator
+	(void)src;
 	return *this;
 }
 
@@ -29,6 +27,7 @@ void	DeepCoreMiner::mine(IAsteroid* asteroid)
 
 std::ostream&	operator<<(std::ostream& os, DeepCoreMiner const& src)
 {
-	// TODO: Implement << operator
+	(void)src;
+	os << "DeepCoreMiner";
 	return os;
 }

@@ -21,18 +21,21 @@ Comet&		Comet::operator=(Comet const& src)
 	return *this;
 }
 
-std::string const&	Comet::beMined(DeepCoreMiner const* laser) const
+std::string	Comet::beMined(DeepCoreMiner const* laser) const
 {
+	(void)laser;
 	return "Meium";
 }
 
-std::string const&	Comet::beMined(StripMiner const* laser) const
+std::string	Comet::beMined(StripMiner const* laser) const
 {
+	(void)laser;
 	return "Tartarite";
 }
 
 std::ostream&	operator<<(std::ostream& os, Comet const& src)
 {
+	(void)src;
 	os << "Comet";
 	return os;
 }
