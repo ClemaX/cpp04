@@ -2,7 +2,13 @@ NAME	=	tests
 
 HDIR	=	.
 SDIR	=	.
-SRCS	=	$(addprefix $(SDIR)/, main.cpp Peon.cpp Sorcerer.cpp Victim.cpp)
+SRCS	=	$(addprefix $(SDIR)/,\
+	main.cpp\
+	Peon.cpp\
+	Sorcerer.cpp\
+	Victim.cpp\
+	SaMere.cpp\
+)
 
 CXX		=	clang++
 CXXFLAGS=	-Wall -Wextra -Werror -Wpedantic -std=c++98
