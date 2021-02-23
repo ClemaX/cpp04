@@ -38,6 +38,7 @@ AWeapon&		AWeapon::operator=(AWeapon const& src)
 
 std::ostream&	operator<<(std::ostream& os, AWeapon const& src)
 {
-	os << src.getName() << std::endl;
+	os << src.getName() << ": apCost: " << src.getAPCost()
+		<< ", damage: " << src.getDamage() << std::endl;
 	return os;
 }

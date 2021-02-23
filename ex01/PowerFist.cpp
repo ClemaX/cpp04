@@ -3,7 +3,6 @@
 PowerFist::PowerFist()
 	:	AWeapon("Power Fist", 8, 50)
 {
-	// TODO: Implement default contructor
 }
 
 PowerFist::~PowerFist()

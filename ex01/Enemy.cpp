@@ -14,7 +14,6 @@ Enemy::Enemy(int hp, std::string const& type)
 	:	hp(hp),
 		type(type)
 {
-	// TODO: Implement default contructor
 }
 
 Enemy::Enemy(Enemy const& src)
@@ -43,7 +42,6 @@ void		Enemy::takeDamage(int amount)
 
 std::ostream&	operator<<(std::ostream& os, Enemy const& src)
 {
-	os << "Enemy: type: " << src.getType() << ", hitpoints: " << src.getHP()
-		<< std::endl;
+	os << src.getType() << " has " << src.getHP() << " hitpoints" << std::endl;
 	return os;
 }

@@ -25,4 +25,3 @@ public:
 };
 
 std::ostream&	operator<<(std::ostream& os, Enemy const& src);
-

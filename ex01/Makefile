@@ -11,6 +11,7 @@ SRCS	=	$(addprefix $(SDIR)/,\
 	PowerFist.cpp\
 	RadScorpion.cpp\
 	SuperMutant.cpp\
+	MutantScorpion.cpp\
 )
 
 CXX		=	clang++
