@@ -11,8 +11,9 @@ private:
 	std::string	name;
 	std::string	title;
 
-public:
 	Sorcerer();
+
+public:
 	~Sorcerer();
 
 	Sorcerer(const Sorcerer& src);
