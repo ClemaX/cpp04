@@ -10,7 +10,7 @@ protected:
 
 public:
 	Victim();
-	~Victim();
+	virtual ~Victim();
 
 	Victim(const Victim& src);
 	Victim(const std::string& name);

@@ -11,7 +11,7 @@ private:
 
 public:
 	Peon();
-	~Peon();
+	virtual ~Peon();
 
 	Peon(std::string const& name);
 	Peon(const Peon& src);
@@ -20,6 +20,3 @@ public:
 
 	void	getPolymorphed() const;
 };
-/*
-std::ostream&	operator<<(std::ostream& os, const Peon& src);
- */
