@@ -12,7 +12,7 @@ private:
 
 public:
 	AWeapon();
-	~AWeapon();
+	virtual ~AWeapon();
 
 	AWeapon(std::string const& name, int apCost, int damage);
 	AWeapon(AWeapon const& src);

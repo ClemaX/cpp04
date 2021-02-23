@@ -3,7 +3,10 @@
 PlasmaRifle::PlasmaRifle()
 	:	AWeapon("Plasma Rifle", 5, 21)
 {
-	// TODO: Implement default contructor
+}
+
+PlasmaRifle::~PlasmaRifle()
+{
 }
 
 void	PlasmaRifle::attack() const

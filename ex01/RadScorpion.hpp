@@ -11,7 +11,7 @@ private:
 
 public:
 	RadScorpion();
-	~RadScorpion();
+	virtual ~RadScorpion();
 
 	RadScorpion(RadScorpion const& src);
 };

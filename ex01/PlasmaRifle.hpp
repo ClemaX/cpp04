@@ -11,6 +11,7 @@ private:
 
 public:
 	PlasmaRifle();
+	virtual ~PlasmaRifle();
 
 	virtual void	attack() const;
 };

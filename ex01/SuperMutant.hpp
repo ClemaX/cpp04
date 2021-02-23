@@ -11,7 +11,7 @@ private:
 
 public:
 	SuperMutant();
-	~SuperMutant();
+	virtual ~SuperMutant();
 
 	SuperMutant(SuperMutant const& src);
 
