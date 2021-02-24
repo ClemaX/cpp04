@@ -1,8 +1,8 @@
 #include "Character.hpp"
 
 Character::Character()
+	:	materies()
 {
-	// TODO: Implement default contructor
 }
 
 Character::~Character()

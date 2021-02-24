@@ -12,10 +12,7 @@ MateriaSource::~MateriaSource()
 	const std::vector<AMateria*>::const_iterator	end = materies.end();
 
 	while (it != end)
-	{
-		delete *it;
-		*it++ = NULL;
-	}
+		delete *it++;
 	materies.clear();
 }
 
@@ -72,11 +69,8 @@ int			iscmp(std::string const& a, std::string const& b)
 	std::string::const_iterator			it_b = b.begin();
 	const std::string::const_iterator	end_a = a.end();
 
-	while (it_a != end_a && std::tolower(*it_a) == std::tolower(*it_b))
-	{
-		it_a++;
-		it_b++;
-	}
+	while (it_a != end_a && std::tolower(*it_a++) == std::tolower(*it_b++))
+		;
 	return (std::tolower(*it_b) - std::tolower(*it_a));
 }
 
