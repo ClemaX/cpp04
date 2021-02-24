@@ -80,7 +80,7 @@ void	Character::unequip(unsigned int index)
 
 void	Character::use(unsigned int index, ICharacter& target)
 {
-	if (index < materiesSize && materies[index] != NULL)
+	if (index < materies.size() && materies[index] != NULL)
 		materies[index]->use(target);
 }
 
