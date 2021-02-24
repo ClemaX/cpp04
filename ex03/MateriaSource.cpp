@@ -62,7 +62,7 @@ MateriaSource&		MateriaSource::operator=(MateriaSource const& src)
 
 void		MateriaSource::learnMateria(AMateria*const materia)
 {
-	if (materia != NULL && materies.size() < materies.capacity())
+	if (materia != NULL && materies.size() < materiesSize)
 		materies.push_back(materia->clone());
 }
 
