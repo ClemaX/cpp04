@@ -46,24 +46,36 @@ Squad&		Squad::operator=(Squad const& src)
 
 	return *this;
 }
-
+/**
+ * @brief Get the current marines count.
+ *
+ * @return The marines count
+ */
 int				Squad::getCount() const { return marines.size(); }
 ISpaceMarine*	Squad::getUnit(int index) const { return marines[index]; }
 
+/**
+ * @brief Push a marine onboard.
+ *
+ * @param newMarine A pointer to the new marine.
+ * @return The new marine's index or -1 when given a NULL-pointer
+ */
 int				Squad::push(ISpaceMarine* newMarine)
 {
-	if (newMarine != NULL)
+	if (newMarine == NULL)
+		return -1;
+
+	const std::deque<ISpaceMarine*>::const_iterator	end = marines.end();
+	std::deque<ISpaceMarine*>::const_iterator		it = marines.begin();
+
+	while (it < end && *it != newMarine)
+		it++;
+	if (it == end)
 	{
-		const std::deque<ISpaceMarine*>::const_iterator	end = marines.end();
-		std::deque<ISpaceMarine*>::const_iterator		it = marines.begin();
-
-		while (it < end && *it != newMarine)
-			it++;
-		if (it == end)
-			marines.push_back(newMarine);
+		marines.push_back(newMarine);
+		return (marines.size());
 	}
-
-	return marines.size();
+	return (end - it);
 }
 
 std::ostream&	operator<<(std::ostream& os, Squad const& src)

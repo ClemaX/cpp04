@@ -25,4 +25,3 @@ public:
 };
 
 std::ostream&	operator<<(std::ostream& os, Squad const& src);
-

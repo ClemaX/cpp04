@@ -22,6 +22,11 @@ TacticalMarine&		TacticalMarine::operator=(TacticalMarine const& src)
 	return *this;
 }
 
+/**
+ * @brief Construct a new dynamically allocated copy of this Object.
+ *
+ * @return A pointer to the cloned Object
+ */
 TacticalMarine*	TacticalMarine::clone() const
 {
 	return new TacticalMarine(*this);
