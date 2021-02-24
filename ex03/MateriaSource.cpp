@@ -20,16 +20,42 @@ MateriaSource::~MateriaSource()
 }
 
 MateriaSource::MateriaSource(MateriaSource const& src)
+	:	materies()
 {
-	(void)src;
-	// TODO: Implement copy contructor
+	materies.reserve(materiesSize);
+
+	std::vector<AMateria*>::const_iterator	it = src.materies.begin();
+	std::vector<AMateria*>::const_iterator	end = src.materies.end();
+
+	while (it != end)
+	{
+		if (*it)
+			materies.push_back((*it)->clone());
+		it++;
+	}
 }
 
 MateriaSource&		MateriaSource::operator=(MateriaSource const& src)
 {
+
 	if (this != &src)
 	{
-		// TODO: Deep copy? this.materies = src.materies;
+		std::vector<AMateria*>::const_iterator	it = materies.begin();
+		std::vector<AMateria*>::const_iterator	end = materies.end();
+
+		while (it != end)
+			delete *it++;
+		materies.clear();
+
+		it = src.materies.begin();
+		end = src.materies.end();
+
+		while (it != end)
+		{
+			if (*it)
+				materies.push_back((*it)->clone());
+			it++;
+		}
 	}
 	return *this;
 }

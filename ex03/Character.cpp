@@ -24,16 +24,45 @@ Character::Character(std::string const& name)
 	materies.reserve(materiesSize);
 }
 
-// TODO: Deep copy materies
 Character::Character(Character const& src)
-	:	name(src.name) //, materies(src.materies)
+	:	name(src.name), materies()
 {
-	// TODO: Implement copy contructor
+	materies.reserve(materiesSize);
+
+	std::vector<AMateria*>::const_iterator	it = src.materies.begin();
+	std::vector<AMateria*>::const_iterator	end = src.materies.end();
+
+	while (it != end)
+	{
+		if (*it)
+			materies.push_back((*it)->clone());
+		it++;
+	}
 }
 
 Character&		Character::operator=(Character const& src)
 {
-	name = src.name;
+	if (this != &src)
+	{
+		name = src.name;
+
+		std::vector<AMateria*>::const_iterator	it = materies.begin();
+		std::vector<AMateria*>::const_iterator	end = materies.end();
+
+		while (it != end)
+			delete *it++;
+		materies.clear();
+
+		it = src.materies.begin();
+		end = src.materies.end();
+
+		while (it != end)
+		{
+			if (*it)
+				materies.push_back((*it)->clone());
+			it++;
+		}
+	}
 	return *this;
 }
 
