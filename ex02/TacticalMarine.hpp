@@ -11,7 +11,7 @@ private:
 
 public:
 	TacticalMarine();
-	~TacticalMarine();
+	virtual ~TacticalMarine();
 
 	TacticalMarine(TacticalMarine const& src);
 

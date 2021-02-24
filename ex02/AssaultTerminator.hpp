@@ -11,7 +11,7 @@ private:
 
 public:
 	AssaultTerminator();
-	~AssaultTerminator();
+	virtual ~AssaultTerminator();
 
 	AssaultTerminator(AssaultTerminator const& src);
 

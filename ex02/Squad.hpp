@@ -13,7 +13,7 @@ private:
 
 public:
 	Squad();
-	~Squad();
+	virtual ~Squad();
 
 	Squad(Squad const& src);
 
