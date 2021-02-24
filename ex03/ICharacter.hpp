@@ -25,5 +25,3 @@ public:
 	virtual void	unequip(unsigned int index) = 0;
 	virtual void	use(unsigned int index, ICharacter& target) = 0;
 };
-
-std::ostream&	operator<<(std::ostream& os, ICharacter const& src);
