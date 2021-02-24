@@ -9,6 +9,7 @@ SRCS	=	$(addprefix $(SDIR)/,\
 	Enemy.cpp\
 	PlasmaRifle.cpp\
 	PowerFist.cpp\
+	Pan.cpp\
 	RadScorpion.cpp\
 	SuperMutant.cpp\
 	MutantScorpion.cpp\
