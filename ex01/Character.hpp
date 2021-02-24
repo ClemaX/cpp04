@@ -27,8 +27,8 @@ public:
 	inline AWeapon const*		getWeapon() const { return weapon; };
 
 	void	recoverAP();
-	void	equip(AWeapon *newWeapon);
-	void	attack(Enemy *enemy);
+	void	equip(AWeapon const* newWeapon);
+	void	attack(Enemy* enemy);
 };
 
 std::ostream&	operator<<(std::ostream& os, Character const& src);

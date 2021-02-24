@@ -50,12 +50,13 @@ void	Character::recoverAP()
 	}
 }
 
-void	Character::equip(AWeapon *newWeapon)
+void	Character::equip(AWeapon const* newWeapon)
 {
 	weapon = newWeapon;
+	std::cout << name << " equips " << *newWeapon << std::endl;
 }
 
-void	Character::attack(Enemy *enemy)
+void	Character::attack(Enemy* enemy)
 {
 	if (weapon != NULL)
 	{
