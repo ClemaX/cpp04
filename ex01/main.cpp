@@ -4,56 +4,52 @@
 
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "Pan.hpp"
 
 int main()
 {
-	Character*	me = new Character("me");
+	Character*	me = new Character("Character");
+
 	std::cout << *me;
 
 	Enemy*	scorpion = new RadScorpion();
-	Enemy*	mScorpion = new MutantScorpion();
+	Enemy*	superMutant = new SuperMutant();
+	Enemy*	mutantScorpion = new MutantScorpion();
 
-	AWeapon* pr = new PlasmaRifle();
-	AWeapon* pf = new PowerFist();
+	const PlasmaRifle	plasmaRifle = PlasmaRifle();
+	const PowerFist		powerFist = PowerFist();
+	const Pan			pan = Pan();
 
-	me->equip(pr);
-	std::cout << *me;
+	me->equip(&plasmaRifle);
+	std::cout << *me << std::endl;
+	me->attack(superMutant);
 
-	std::cout << std::endl;
-
-	me->equip(pf);
+	me->equip(&powerFist);
 	me->attack(scorpion);
-	std::cout << *me;
+	std::cout << *me << std::endl;
 
-	std::cout << std::endl;
-
-	me->equip(pr);
-	std::cout << *me;
-
-	std::cout << std::endl;
+	me->equip(&plasmaRifle);
+	std::cout << *me << std::endl;
 
 	me->attack(scorpion);
-	std::cout << *me;
-
-	std::cout << std::endl;
+	std::cout << *me << std::endl;
 
 	me->attack(scorpion);
-	std::cout << *me;
-	std::cout << *mScorpion << *pr;
+	std::cout << *me << *mutantScorpion << std::endl;
 
-	std::cout << std::endl;
+	std::cout << *mutantScorpion;
+	me->attack(mutantScorpion);
+	std::cout << *me << *mutantScorpion << std::endl;
 
-	std::cout << *mScorpion;
-	std::cout << *pr;
-	me->attack(mScorpion);
-	std::cout << *me << *mScorpion;
-
-	std::cout << std::endl;
+	me->equip(&pan);
+	me->attack(mutantScorpion);
+	std::cout << *me << *mutantScorpion << std::endl;
 
 	delete me;
-	delete pr;
-	delete pf;
-	delete mScorpion;
+	delete mutantScorpion;
+	delete superMutant;
+
+	std::cout << std::endl;
 
 	// system("../leaks.sh tests");
 
