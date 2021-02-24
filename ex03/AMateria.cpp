@@ -18,6 +18,11 @@ AMateria::AMateria(std::string const& type, unsigned int xp)
 {
 }
 
+AMateria::~AMateria()
+{
+	std::cout << "Destroying " << *this << "..." << std::endl;
+}
+
 void			AMateria::use(ICharacter& target)
 {
 	(void)target;

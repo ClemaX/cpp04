@@ -19,7 +19,7 @@ protected:
 	AMateria(std::string const& type, unsigned int xp);
 
 public:
-	virtual ~AMateria() {};
+	virtual ~AMateria();
 
 	inline std::string const&	getType() const { return type; };
 	inline unsigned int			getXP() const { return xp; };

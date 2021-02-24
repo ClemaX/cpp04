@@ -26,7 +26,7 @@ MateriaSource::MateriaSource(MateriaSource const& src)
 
 	while (it != end)
 	{
-		if (*it)
+		if (*it != NULL)
 			materies.push_back((*it)->clone());
 		it++;
 	}

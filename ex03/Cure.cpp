@@ -12,7 +12,6 @@ Cure::~Cure()
 Cure::Cure(Cure const& src)
 	:	AMateria("Cure", src.xp)
 {
-	// TODO: Implement copy contructor
 }
 
 Cure&		Cure::operator=(AMateria const& src)
@@ -32,7 +31,6 @@ Cure*		Cure::clone() const
 
 void		Cure::use(ICharacter& target)
 {
-	// TODO: Print target name
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 	AMateria::use(target);
 }
